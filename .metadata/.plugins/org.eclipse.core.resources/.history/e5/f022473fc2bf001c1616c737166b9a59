@@ -1,0 +1,24 @@
+package com.Boot.Application.Model;
+
+import javax.persistence.*;
+
+@Entity
+public class EmployeeLeaves 
+{
+	@Id
+   private int totalLeaves;
+   private int leavesLeft;
+   
+public int getTotalLeaves() {
+	return totalLeaves;
+}
+public void setTotalLeaves(int totalLeaves) {
+	this.totalLeaves = totalLeaves;
+}
+public int getLeavesLeft() {
+	return leavesLeft;
+}
+public void setLeavesLeft(int leavesLeft) {
+	this.leavesLeft = leavesLeft;
+}
+}

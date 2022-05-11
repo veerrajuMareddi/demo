@@ -1,0 +1,25 @@
+INDEX VERSION 1.131
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3404736951.index
+\Web2\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\325190301.index
+\WebProject\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\411752537.index
+\WebProject\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\532520077.index
+\OilCorporation\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1659184777.index
+\MavenType\src\main\resources
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2708453114.index
+\Shop\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1219840518.index
+\OilCorporation\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3988860073.index
+\OilCorporation\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1632619175.index
+\WebProject\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4144086518.index
+\WebProject\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2546358429.index
+\OilCorporation\src\main\java
+D:\Spring core apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3717227390.index
+\MavAnno\src\main\java

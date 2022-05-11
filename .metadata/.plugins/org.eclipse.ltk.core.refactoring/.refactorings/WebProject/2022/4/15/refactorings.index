@@ -1,0 +1,9 @@
+1649257289839	Move 'dispatcherservlet-servlet.xml' to 'lib'
+1649257366096	Move 'view' to 'WEB-INF'
+1649257377858	Move 'dispatcherservlet-servlet.xml' to 'WEB-INF'
+1649257381697	Move 'index.jsp' to 'WEB-INF'
+1649257405221	Move 'index.jsp' to 'META-INF'
+1649257451562	Move 'index.jsp' to 'webapp'
+1649258326853	Rename resource 'Web.xml'
+1649303112525	Rename resource 'dispatcherservlet-servlet.xml'
+1649308380767	Copy files

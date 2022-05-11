@@ -1,0 +1,62 @@
+package com.crud.Service;
+
+import java.util.List;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.crud.Model.Product;
+import com.crud.Repository.ProductRepository;
+
+@Service
+@Transactional
+public class ProductService {
+ 
+    @Autowired
+    private ProductRepository repo;
+    
+    public Product savePostProduct(Product prod) {
+        return repo.save(prod);
+    }
+     public List<Product> saveProducts(List<Product>prod) {
+        return repo.saveAll(prod);
+    }
+     public List<Product>getProducts(){
+		return repo.findAll();
+    	 
+     }
+    public Product getProductById(Integer id) {
+        return repo.findById(id).get();
+    }
+     
+    public String deleteProductById(Integer id) {
+        repo.deleteById(id);
+		return "Deleted successfully";
+    }
+    
+    public Product updateProduct(Product prod) {
+    	
+    	Product p=repo.findById(prod.getId()).orElse(null);
+    	p.setName(prod.getName());
+    	p.setPrice(prod.getPrice());
+		return p;
+    	
+    }
+	public Product savePostProduct(Product p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

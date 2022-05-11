@@ -1,0 +1,66 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>details</title>
+</head>
+<body>
+
+<h1>Confirm Details Once</h1>
+<br>
+<table border="1">
+<tr>
+<th>Branch</th>
+<th>Location</th>
+<th>Branch Manager</th>
+<th>Resreves</th>
+<th>Price</th>
+<th>Total Employees</th>
+<th>Basic salary</th>
+<th>Crude Prices</th>
+<th>Petrol prices</th>
+<th>Deisel Prices</th>
+
+<th>Gas Prices</th>
+<th>Update Details </th>
+<th>Delete Details</th>
+</tr>
+
+<tr>
+
+
+<c:url var="deleteLink" value="/src/deleteById">
+								<c:param name="Id" value="${add.branch}" />
+							</c:url>
+
+<c:url var="updateLink" value="/src/update">
+								<c:param name="Id" value="${add.branch}" />
+							</c:url>							
+<center>
+<td>${add.branch}</td>
+<td>${add.location}</td>
+<td>${add.branchManager}</td>
+<td>${add.oilReserves}</td>
+<td>${add.barrelPrice}</td>
+<td>${add.emp.toatalEmployees}</td>
+<td>${add.emp.salary}</td>
+<td>${add.prices.crudePrice}</td>
+<td>${add.prices.petrolPrice}</td>
+<td>${add.prices.dieselPrice}</td>
+<td>${add.prices.gasPrice}</td>
+
+  
+<td><a href="${updateLink}" >Update</a></td>
+<td><a href="${deleteLink}" >delete</a></td>
+</center>
+</tr>
+
+</table>
+<a class="btn btn-info" href="/src/index">Home</a>
+</body>
+</html>

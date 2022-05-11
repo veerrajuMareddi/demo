@@ -1,0 +1,113 @@
+package com.corp.OilcorpController;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.corp.OilcorpModel.OilCorp;
+import com.corp.OilcorpModel.OilCorpEmployees;
+import com.corp.OilcorpRepository.OilCropEmployeesRepository;
+import com.corp.OilcorpRepository.PricesRepository;
+import com.corp.OilcorpService.OilCorpService;
+@Controller
+@RequestMapping("/src")
+public class OilCorpController {
+	@Autowired
+	private OilCorpService service;
+	
+	@Autowired
+	private OilCropEmployeesRepository empSer;
+	
+	@Autowired
+	private PricesRepository price;
+
+	@GetMapping("/index")
+	public String homePage()
+	{
+		return "save";
+	}
+	@GetMapping("/ind")
+	public String homeePage()
+	{
+		return "simple";
+	}
+	
+	
+//	private OilCorpService service;
+    @ResponseBody
+	@PostMapping("/saveCorp")
+	public OilCorp save(@RequestBody
+			//@ModelAttribute("oilCorp") 
+			OilCorp oil)
+	{
+//    	OilCorpEmployees o1 = (OilCorpEmployees)oil.getEmp();
+    	empSer.saveAll(oil.getEmp());
+    	
+		return service.saveData(oil);
+	} 
+    @RequestMapping("/saveModel")
+    @PostMapping
+    public OilCorp savei( @ModelAttribute("oilCorp") OilCorp oil)
+			
+	{
+    //	service.
+		service.saveData(oil);
+		return oil;
+	}
+    @RequestMapping("/redirect")
+    @PostMapping
+    public String child(@ModelAttribute("oilCorpEmployees") OilCorpEmployees emp)
+    {
+    	empSer.save(emp);
+    	return "index";
+    }
+    //@ResponseBody
+	/*
+	 * @PostMapping("/saveModel") public OilCorp
+	 * savee( @ModelAttribute("oilCorpEmployee") OilCorp oil)
+	 * 
+	 * { // service. service.saveData(oil); return (oil); }
+	 */
+    
+	@ResponseBody
+	@PostMapping("/saveCorps")
+	public List <OilCorp> save(@RequestBody List<OilCorp> obj)
+	{
+		service.saveCorps(obj);
+		return obj;
+	}
+	@ResponseBody
+	@PutMapping("/updateCorp")
+	public OilCorp update(@RequestBody OilCorp obj)
+	{
+		return service.updateCorp(obj);
+		
+	}
+	@ResponseBody
+	@GetMapping("/getById/{id}")
+	  public OilCorp get(@PathVariable Integer id)
+	  {
+		return service.getBYId(id);
+	  }
+	@ResponseBody
+	@GetMapping("/getAll")
+	public List<OilCorp> getAll()
+	{
+		return service.getAll();
+	}
+	@ResponseBody
+	@DeleteMapping("/deleteById/{id}")
+	public String delete(@PathVariable Integer id)
+	{
+		return service.deleteBYId(id);
+	}
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [11/Apr/2022:18:10:08 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:11:59 +0530] "POST /product/saveproduct HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:12:03 +0530] "POST /product/saveproduct HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:12:12 +0530] "POST /product/saveproduct HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:12:18 +0530] "POST /product/saveproduct HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:13:13 +0530] "POST /product/saveproduct HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:14:24 +0530] "GET /product/allpoducts HTTP/1.1" 404 773
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:15:28 +0530] "PUT /product/updateproduct HTTP/1.1" 405 685
+0:0:0:0:0:0:0:1 - - [11/Apr/2022:18:16:35 +0530] "PUT /product/updateproduct HTTP/1.1" 405 685

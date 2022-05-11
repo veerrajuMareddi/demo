@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	 
+	<!-- <bean id ="reference" class="custum.core.Salary" scope="singleton"/>
+	<bean id ="reference2" class="custum.core.insurance" scope="singleton"/>
+	<bean id ="bean1" class="custum.core.Wbean" scope="singleton">
+	<property name="amount" value="2500" ></property>
+	<property name="loan" value="1000"></property>
+	<property name="log" ref="reference2"></property>
+	<property name="gross" ref="reference"></property> 
+	</bean>-->
+<!-- 	<bean class ="custum.core.Wbean" id ="bean1">
+	<property name ="amount" value="123"></property>
+	<property name="loan" value="345" ></property>
+	<property name="log">
+	<bean class="custum.core.insurance" scope="singleton"/>
+	</property>
+	<property name="gross">
+	<bean class="custum.core.Salary" scope="singleton"/>
+	</property>
+	</bean>
+	<bean class ="custum.core.Wbean2" id ="bean2">
+	<property name ="amount" value="123"></property>
+	<property name="loan" value="345" ></property>
+	<property name="log">
+	<bean class="custum.core.insurance" scope="singleton"/>
+	</property>
+	<property name="gross">
+	<bean class="custum.core.Salary" scope="singleton"/>
+	</property>
+	</bean> -->
+	
+	<context:annotation-config></context:annotation-config> 
+	<bean class="custum.core.insurance" id="bean"></bean>
+	<bean class="custum.core.Wbean" id="bean2"> 
+	<property name="log"  ref="bean"></property>
+	  
+	</bean> 
+</beans>
